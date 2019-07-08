@@ -1,20 +1,42 @@
-<h1>
-  Proyecto de Angular
-</h1>
-<ul>
-  <li>
-    <a routerLink="['/sobre-mi']">
-      Sobre Mi
-    </a>
-    <a routerLink="['/proyectos']">
-      Proyectos
-    </a>
-    <a routerLink="['/crear-proyecto']">
-      Crear Proyecto
-    </a>
-    <a routerLink="['/contacto]">
-      sobre mi
-    </a>
-  </li>
-</ul>
+<header>
+  <ul>
+    <li>
+      <a routerLink="['/sobre-mi']">
+        Sobre Mi
+      </a>
+    </li>
+
+    <li>
+      <a routerLink="['/proyectos']">
+        Proyectos
+      </a>
+    </li>
+
+    <li id="logo">
+      <a href="#">
+        egx
+      </a>
+    </li>
+
+    <li>
+      <a routerLink="['/crear-proyecto']">
+        Crear Proyecto
+      </a>
+    </li>
+
+    <li>
+      <a routerLink="['/contacto]">
+       contacto
+      </a>
+    </li>
+
+  </ul>
+</header>
+
+<section>
 <router-outlet></router-outlet>
+</section>
+
+<footer>
+  created by: elkingutierrex &copy;
+</footer>
