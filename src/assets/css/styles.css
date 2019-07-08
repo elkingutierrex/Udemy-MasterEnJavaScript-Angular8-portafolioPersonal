@@ -37,15 +37,16 @@ header{
 }
 header ul {
   display: block;
-  width: 50%;
+  width: 60%;
   height: inherit;
   margin: 0px auto;
+  margin-top: -3px;
 }
 header ul li {
   display: inline-block;
   margin: 0px;
   text-align: center;
-  line-height: 90px;
+  line-height: 88px;
 }
 header a{
   display: block;
@@ -60,6 +61,16 @@ header a:hover{
   background: rgba(0, 0,0, 0.8);
   cursor: pointer;
 }
+#logo{
+  font-family: "finger";
+  font-size: 30px;
+}
+#logo a{
+  transition: color 500ms, transform 500ms;
+}
+
 header #logo a:hover{
   background: transparent;
+  color:black;
+  transform: scale(1.50, 1.50);
 }
