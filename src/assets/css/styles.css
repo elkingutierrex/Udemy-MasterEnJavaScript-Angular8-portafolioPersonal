@@ -37,10 +37,10 @@ header{
 }
 header ul {
   display: block;
-  width: 60%;
   height: inherit;
   margin: 0px auto;
   margin-top: -3px;
+  text-align: center;
 }
 header ul li {
   display: inline-block;
