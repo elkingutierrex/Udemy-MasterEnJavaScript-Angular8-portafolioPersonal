@@ -9,7 +9,12 @@
       <input type="text"
              name="name"
              #name="ngModel"
-             [(ngModel)]="project.name" />
+             [(ngModel)]="project.name"
+             required/>
+      <span *ngIf="name.touched && !name.valid"
+            class="form_error">
+        El nombre es obligatorio
+      </span>
     </p>
     <p>
       <label for="description">
@@ -18,8 +23,13 @@
       <textarea type="text"
                 name="description"
                 #description="ngModel"
-                [(ngModel)]="project.description">
+                [(ngModel)]="project.description"
+                required>
       </textarea>
+      <span *ngIf="description.touched && !description.valid"
+             class="form_error">
+          La descripción obligatoria
+       </span>
     </p>
     <p>
       <label for="category">
@@ -28,7 +38,12 @@
       <input type="text"
              name="category"
              #category="ngModel"
-             [(ngModel)]="project.category" />
+             [(ngModel)]="project.category"
+             required />
+      <span *ngIf="category.touched && !category.valid"
+            class="form_error">
+        La categoria es obligatoria
+      </span>
     </p>
     <p>
       <label for="year">
@@ -37,16 +52,26 @@
       <input type="text"
              name="year"
              #year="ngModel"
-             [(ngModel)]="project.year" />
+             [(ngModel)]="project.year"
+             required />
+      <span *ngIf="year.touched && !year.valid"
+            class="form_error">
+        El año de lanzamiento es obligatorio
+      </span>
     </p>
     <p>
-      <label for="langs">
+      <label for="">
         Lenguajes utilizados
       </label>
       <input type="text"
              name="langs"
              #langs="ngModel"
-             [(ngModel)]="project.langs" />
+             [(ngModel)]="project.langs"
+             required/>
+      <span *ngIf="langs.touched && !langs.valid"
+            class="form_error">
+        Los lenguajes utilizados son obligatorios
+      </span>
     </p>
     <p>
       <label for="image">
@@ -54,9 +79,15 @@
       </label>
       <input type="file"
              name="image"
-             placeholder="Cargar imagen"/>
+             placeholder="Cargar imagen"
+             required/>
+      <span *ngIf="image.touched && !image.valid"
+            class="form_error">
+        La imagen es obligatoria
+      </span>
     </p>
 <input type="submit"
-       value="Enviar"/>
+       value="Enviar"
+       [disabled]="!projectForm.valid"/>
   </form>
 </div>
