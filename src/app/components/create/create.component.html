@@ -3,29 +3,60 @@
 
   <form #projectForm="ngForm" (ng-submit)="onSubmit(projectForm)">
     <p>
-      <label for="name">Nombre</label>
-      <input type="text" name="name" #name="ngModel" [(ngModel)]="project.name" />
+      <label for="name">
+        Nombre
+      </label>
+      <input type="text"
+             name="name"
+             #name="ngModel"
+             [(ngModel)]="project.name" />
     </p>
     <p>
-      <label for="description">Descripción</label>
-      <textarea type="text" name="description" #description="ngModel" [(ngModel)]="project.description"></textarea>
+      <label for="description">
+        Descripción
+      </label>
+      <textarea type="text"
+                name="description"
+                #description="ngModel"
+                [(ngModel)]="project.description">
+      </textarea>
     </p>
     <p>
-      <label for="category">Categoria</label>
-      <input type="category" name="category" #category="ngModel" [(ngModel)]="project.category" />
+      <label for="category">
+        Categoria
+      </label>
+      <input type="text"
+             name="category"
+             #category="ngModel"
+             [(ngModel)]="project.category" />
     </p>
     <p>
-      <label for="year">Año de lanzamiento</label>
-      <input type="text" name="year" #year="ngModel" [(ngModel)]="project.year" />
+      <label for="year">
+        Año de lanzamiento
+      </label>
+      <input type="text"
+             name="year"
+             #year="ngModel"
+             [(ngModel)]="project.year" />
     </p>
     <p>
-      <label for="langs">Lenguajes utilizados</label>
-      <input type="text" name="langs" #langs="ngModel" [(ngModel)]="project.langs" />
+      <label for="langs">
+        Lenguajes utilizados
+      </label>
+      <input type="text"
+             name="langs"
+             #langs="ngModel"
+             [(ngModel)]="project.langs" />
     </p>
     <p>
-      <label for="image">Imagen del proyecto</label>
-      <input type="file" name="image" placeholder="Cargar imagen"/>
+      <label for="image">
+        Imagen del proyecto
+      </label>
+      <input type="file"
+             name="image"
+             placeholder="Cargar imagen"/>
     </p>
-<input type="submit" value="enviar"/>
+<input type="submit"
+       value="Enviar"/>
   </form>
 </div>
