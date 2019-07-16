@@ -1,1 +1,11 @@
-<p>projects works!</p>
+<div class="container">
+  <h2>Proyectos</h2>
+  <ul>
+    <li *ngFor="let item of projects">
+      <!-- <img src="{{url + }}"> -->
+      <h3>{{item.name}}</h3>
+      <span>{{item.category}}</span>
+    </li>
+  </ul>
+
+</div>
