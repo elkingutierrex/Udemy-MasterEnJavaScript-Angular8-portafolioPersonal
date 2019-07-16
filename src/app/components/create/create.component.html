@@ -1,7 +1,21 @@
 <div class="container">
   <h2>{{title}} </h2>
 
-  <form #projectForm="ngForm" (ng-submit)="onSubmit(projectForm)">
+  <div class="message success"
+       *ngIf="status == 'success'">
+    <span>El proyecto se ha creado correctamente, puedes verlo
+      <a href="#">aquí!</a>
+     </span>
+  </div>
+  <div class="message failed"
+        *ngIf="status == 'failed'">
+      <span>
+        El proyecto No se ha podido crear
+       </span>
+  </div>
+
+  <form #projectForm="ngForm"
+       (ng-submit)="onSubmit(projectForm)">
     <p>
       <label for="name">
         Nombre
@@ -53,14 +67,14 @@
              name="year"
              #year="ngModel"
              [(ngModel)]="project.year"
-             required />
+              />
       <span *ngIf="year.touched && !year.valid"
             class="form_error">
         El año de lanzamiento es obligatorio
       </span>
     </p>
     <p>
-      <label for="">
+      <label for="langs">
         Lenguajes utilizados
       </label>
       <input type="text"
@@ -80,14 +94,13 @@
       <input type="file"
              name="image"
              placeholder="Cargar imagen"
-             required/>
-      <span *ngIf="image.touched && !image.valid"
-            class="form_error">
-        La imagen es obligatoria
-      </span>
+             [(ngModel)]="image"/>
+
     </p>
 <input type="submit"
        value="Enviar"
-       [disabled]="!projectForm.valid"/>
+       [disabled]="!projectForm.valid"
+       (click)="onSubmit(projectForm)"
+       />
   </form>
 </div>
