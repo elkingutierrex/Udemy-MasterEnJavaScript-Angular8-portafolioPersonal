@@ -94,7 +94,8 @@
       <input type="file"
              name="image"
              placeholder="Cargar imagen"
-             [(ngModel)]="image"/>
+             [(ngModel)]="image"
+             (change)="fileChangeEvent($event)"/>
 
     </p>
 <input type="submit"
