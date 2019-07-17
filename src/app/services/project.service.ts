@@ -5,26 +5,30 @@ import { Project } from '../models/project';
 import { Global } from './global';
 
 @Injectable()
-export class ProjectService{
+export class ProjectService {
   public url: string;
 
   constructor(
     private _http: HttpClient
-  ){
-this.url = Global.url
+  ) {
+    this.url = Global.url
   }
-  testService(){
+  testService() {
     return 'Probando el modelo de angular'
   }
-  saveProject(project : Project): Observable <any>{
+  saveProject(project: Project): Observable<any> {
     let params = JSON.stringify(project);
     let headers = new HttpHeaders().set('Content-Type', 'application/json');
 
-    return this._http.post(this.url + '/save-project', params, {headers:headers})
+    return this._http.post(this.url + '/save-project', params, { headers: headers })
   }
-  getProjects():Observable<any>{
+  getProjects(): Observable<any> {
     let headers = new HttpHeaders().set('Content-Type', 'application/json');
 
-    return this._http.get(this.url + '/projects', {headers: headers});
+    return this._http.get(this.url + '/projects', { headers: headers });
+  }
+  getProject(id): Observable<any> {
+    let headers = new HttpHeaders().set('Content-Type', 'application/json');
+    return this._http.get(this.url + '/project' + '/' + id, { headers: headers })
   }
 }
