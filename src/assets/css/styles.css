@@ -154,6 +154,20 @@ article.about {
   padding-top: 10px;
 }
 
+.container .image{
+  float: left;
+  width: 47%;
+}
+
+.container .data{
+  float: left;
+  width: 47%;
+  margin-left: 30px;
+}
+
+.container .image img{
+  width: 100%;
+}
 .container h2 {
   display: block;
   border-bottom: 1px solid #ccc;
@@ -181,7 +195,9 @@ form textarea {
 }
 
 form button,
-form input[type="submit"] {
+form input[type="submit"]
+, .button-edit
+, .button-delete {
   font-size: 17px;
   padding: 5px;
   margin-top: 15px;
@@ -191,8 +207,24 @@ form input[type="submit"] {
   cursor: pointer;
 }
 
+.button-edit
+, .button-delete{
+  width: 40%;
+  float: left;
+  margin-right: 10px;
+  text-decoration: none;
+}
+
+.button-delete{
+  background: red;
+}
+
+.button-edit{
+  background: orange;
+}
+
 form button:hover,
-form input[type="submit"]:hover {
+form input[type="submit"]:hover{
   background: rgba(53, 103, 164, 0.8);
   border: 1px solid rgba(13, 67, 133);
   cursor: pointer;
