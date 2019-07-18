@@ -20,7 +20,10 @@
       </p>
       <p>
         <a href="#" class="button-edit">Editar</a>
-        <a href="#" class="button-delete">Eliminar</a>
+        <a class="button-delete"
+           (click)="deleteProject(project._id)">
+           Eliminar
+        </a>
       </p>
   </div>
 </div>
