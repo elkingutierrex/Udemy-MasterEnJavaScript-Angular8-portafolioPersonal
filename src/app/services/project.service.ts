@@ -3,7 +3,6 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Project } from '../models/project';
 import { Global } from './global';
-import { type } from 'os';
 import { identifierModuleUrl } from '@angular/compiler';
 
 @Injectable()
